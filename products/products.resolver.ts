@@ -5,7 +5,7 @@ import { Product, User } from './products.model';
 
 @Resolver()
 export class ProductsResolver {
-  constructor(private productsService: ProductsService) {}
+  constructor(private service: ProductsService) {}
 
   @Query(of => User)
   getUser(@Args({ name: 'id' }) id: number) {
@@ -14,6 +14,6 @@ export class ProductsResolver {
 
   @Query(of => Product)
   getProducts() {
-    return this.productsService.products;
+    return this.service.products;
   }
 }
