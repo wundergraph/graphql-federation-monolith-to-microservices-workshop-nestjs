@@ -1,13 +1,12 @@
-import { Args, Query, Resolver } from '@nestjs/graphql';
+import { Resolver, ResolveReference } from '@nestjs/graphql';
 import { ReviewsService } from './reviews.service';
-import { User } from './reviews.model';
 
-@Resolver()
-export class ReviewsResolver {
-  constructor(private usersService: ReviewsService) {}
+@Resolver('User')
+export class UsersResolver {
+  constructor(private service: ReviewsService) {}
 
-  @Query(of => User)
-  getUser(@Args({ name: 'id' }) id: number) {
-    return this.usersService.findUserById(id);
+  @ResolveReference()
+  resolveReference(reference: { __typename: string; id: number }) {
+    return this.service.findUserById(reference.id);
   }
 }

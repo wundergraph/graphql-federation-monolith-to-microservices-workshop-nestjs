@@ -1,7 +1,6 @@
 extend schema @link(url: "https://specs.apollo.dev/federation/v2.4", import: ["@override", "@key", "@shareable"])
 
 type Query {
-  getUser(id: Int!): User @shareable
   getProducts: [Product]! @override(from: "monolith")
 }
 
@@ -10,7 +9,7 @@ type Product {
   rating: Float @override(from: "monolith")
 }
 
-type User {
+type User @key(fields: "id") {
   id: Int! @shareable
   basket: [Product!] @override(from: "monolith")
 }

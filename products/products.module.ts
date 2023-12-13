@@ -4,12 +4,12 @@ import {
 } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
-import { ProductsResolver } from './products.resolver';
+import { ProductsResolver, UsersResolver } from './products.resolver';
 import { ProductsService } from './products.service';
 
 
 @Module({
-  providers: [ProductsResolver, ProductsService],
+  providers: [ProductsResolver, ProductsService, UsersResolver],
   imports: [
     GraphQLModule.forRoot<ApolloFederationDriverConfig>({
       driver: ApolloFederationDriver,
