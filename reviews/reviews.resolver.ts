@@ -4,10 +4,10 @@ import { User } from './reviews.model';
 
 @Resolver()
 export class ReviewsResolver {
-  constructor(private usersService: ReviewsService) {}
+  constructor(private service: ReviewsService) {}
 
   @Query(of => User)
   getUser(@Args({ name: 'id' }) id: number) {
-    return this.usersService.findUserById(id);
+    return this.service.findUserById(id);
   }
 }

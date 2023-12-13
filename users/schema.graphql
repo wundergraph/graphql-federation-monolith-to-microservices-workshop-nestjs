@@ -4,7 +4,7 @@ type Query {
   getUser(id: Int!): User @shareable
 }
 
-type User  {
+type User {
   id: Int! @override(from: "monolith") @shareable
   username: String! @override(from: "monolith")
 }
