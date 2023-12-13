@@ -2,11 +2,11 @@ extend schema @link(url: "https://specs.apollo.dev/federation/v2.4", import: ["@
 
 type User @key(fields: "id") {
   id: Int!
-  reviews: [Review!]! @override(from: "monolith")
+  reviews: [Review!]!
 }
 
 type Review {
-  content: String! @override(from: "monolith")
-  productName: String! @override(from: "monolith")
-  rating: Int! @override(from: "monolith")
+  content: String!
+  productName: String!
+  rating: Int!
 }
