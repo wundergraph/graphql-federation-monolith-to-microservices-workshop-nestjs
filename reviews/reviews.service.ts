@@ -13,7 +13,7 @@ export class ReviewsService {
     { id: 3, reviews: null },
   ];
 
-  findById(id: number) {
+  findUserById(id: number) {
     return this.users.find((user) => user.id === id);
   }
 }

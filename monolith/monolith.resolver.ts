@@ -8,7 +8,7 @@ export class MonolithResolver {
 
   @Query(of => User)
   getUser(@Args({ name: 'id' }) id: number) {
-    return this.monolithService.findById(id);
+    return this.monolithService.findUserById(id);
   }
 
   @Query(of => Product)

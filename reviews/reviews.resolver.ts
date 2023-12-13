@@ -8,6 +8,6 @@ export class ReviewsResolver {
 
   @Query(of => User)
   getUser(@Args({ name: 'id' }) id: number) {
-    return this.usersService.findById(id);
+    return this.usersService.findUserById(id);
   }
 }

@@ -22,7 +22,7 @@ export class MonolithService {
     { id: 3, username: 'ProfessorOak', reviews: [], basket: [this.masterball] },
   ];
 
-  findById(id: number) {
+  findUserById(id: number) {
     return this.users.find((user) => user.id === id);
   }
 }
