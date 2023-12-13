@@ -1,0 +1,7 @@
+wgc subgraph publish products --label team=A --routing-url http://localhost:4041/graphql --schema Documents/Programming/WunderGraph/nest-js-workshop/products/schema.graphql
+wgc subgraph publish users --label team=A --routing-url http://localhost:4042/graphql --schema Documents/Programming/WunderGraph/nest-js-workshop/users/schema.graphql
+wgc subgraph publish reviews --label team=A --routing-url http://localhost:4043/graphql --schema Documents/Programming/WunderGraph/nest-js-workshop/reviews/schema.graphql
+
+wgc subgraph publish products --label team=A --schema Documents/Programming/WunderGraph/nest-js-workshop/products/schema.graphql
+wgc subgraph publish users --label team=A --schema Documents/Programming/WunderGraph/nest-js-workshop/users/schema.graphql
+wgc subgraph publish reviews --label team=A --schema Documents/Programming/WunderGraph/nest-js-workshop/reviews/schema.graphql
