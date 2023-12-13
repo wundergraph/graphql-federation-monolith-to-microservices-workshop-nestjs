@@ -10,6 +10,6 @@ type Product {
 }
 
 type User @key(fields: "id") {
-  id: Int! @shareable
+  id: Int!
   basket: [Product!] @override(from: "monolith")
 }
