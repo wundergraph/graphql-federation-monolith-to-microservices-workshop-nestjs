@@ -1,0 +1,22 @@
+type Query {
+  getUser(id: Int!): User
+  getProducts: [Product]!
+}
+
+type Product {
+  upc: ID!
+  rating: Float
+}
+
+type Review {
+  productName: String!
+  content: String!
+  rating: Int!
+}
+
+type User {
+  id: Int!
+  username: String!
+  reviews: [Review!]!
+  basket: [Product!]
+}

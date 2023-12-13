@@ -1,0 +1,10 @@
+extend schema @link(url: "https://specs.apollo.dev/federation/v2.4", import: ["@override", "@key", "@shareable"])
+
+type Query {
+  getProducts: [Product]! @override(from: "monolith")
+}
+
+type Product @shareable {
+  upc: ID!
+  rating: Float
+}

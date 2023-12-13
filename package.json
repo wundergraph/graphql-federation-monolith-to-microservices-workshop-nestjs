@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "start:monolith": "ts-node ./monolith/main.ts",
+    "start:products": "ts-node ./products/main.ts",
+    "start:users": "ts-node ./users/main.ts",
+    "start:reviews": "ts-node ./reviews/main.ts",
+    "start": "concurrently --kill-others-on-fail \"ts-node monolith/main.ts\" \"ts-node users/main.ts\" \"ts-node products/main.ts\" \"ts-node reviews/main.ts\""
+  },
+  "dependencies": {
+    "@apollo/subgraph": "^2.6.2",
+    "@nestjs/apollo": "^12.0.11",
+    "@nestjs/cli": "^10.2.1",
+    "@nestjs/common": "^10.2.10",
+    "@nestjs/core": "^10.2.10",
+    "@nestjs/graphql": "^12.0.11",
+    "@nestjs/platform-express": "^10.2.10",
+    "concurrently": "^8.2.2",
+    "graphql": "^16.8.1",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
