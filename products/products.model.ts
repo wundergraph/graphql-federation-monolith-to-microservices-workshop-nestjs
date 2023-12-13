@@ -8,3 +8,12 @@ export class Product {
   @Field()
   rating: number;
 }
+
+@ObjectType()
+export class User {
+  @Field()
+  id: number;
+
+  @Field()
+  basket: Product[];
+}
