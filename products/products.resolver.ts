@@ -9,7 +9,7 @@ export class ProductsResolver {
 
   @Query(of => User)
   getUser(@Args({ name: 'id' }) id: number) {
-    return this.productsService.findUserById(id);
+    return this.service.findUserById(id);
   }
 
   @Query(of => Product)
