@@ -5,7 +5,6 @@ type User @key(fields: "id") {
   reviews: [Review!]! @override(from: "monolith")
 }
 
-"""reviews"""
 type Review {
   content: String! @override(from: "monolith")
   productName: String! @override(from: "monolith")
