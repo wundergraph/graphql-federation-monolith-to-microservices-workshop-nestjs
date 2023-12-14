@@ -4,7 +4,7 @@ type Query {
   getProducts: [Product]! @override(from: "monolith")
 }
 
-type Product {
-  upc: ID! @override(from: "monolith")
-  rating: Float @override(from: "monolith")
+type Product @shareable {
+  upc: ID!
+  rating: Float
 }
