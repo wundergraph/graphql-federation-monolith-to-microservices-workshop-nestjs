@@ -1,4 +1,4 @@
-import { Field, ObjectType } from '@nestjs/graphql';
+import { Directive, Field, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
 export class Review {
@@ -13,6 +13,7 @@ export class Review {
 }
 
 @ObjectType()
+@Directive('@key(fields: "id")')
 export class User {
   @Field()
   id: number;
