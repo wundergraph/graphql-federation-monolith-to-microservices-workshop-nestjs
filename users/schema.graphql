@@ -1,7 +1,7 @@
 extend schema @link(url: "https://specs.apollo.dev/federation/v2.4", import: ["@override", "@key", "@shareable"])
 
 type Query {
-  getUser(id: Int!): User @override(from: "monolith")
+  getUser(id: Int!): User @override(from: "monolith") @shareable
 }
 
 type User @key(fields: "id") {
