@@ -10,7 +10,7 @@ export class ReviewsService {
   private users: User[] = [
     { id: 1, reviews: [this.ashReviewOne, this.ashReviewTwo] },
     { id: 2, reviews: [this.garyReviewOne] },
-    { id: 3, reviews: [] },
+    { id: 3, reviews: null },
   ];
 
   findUserById(id: number) {
