@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Product } from './products.model';
+import { Product, User } from './products.model';
 
 @Injectable()
 export class ProductsService {
@@ -12,4 +12,14 @@ export class ProductsService {
     this.potion,
     this.masterball,
   ];
+
+  private users: User[] = [
+    { id: 1, basket: [ this.pokeball, this.potion ] },
+    { id: 2, basket: null },
+    { id: 3, basket: [this.masterball] },
+  ];
+
+  findUserById(id: number) {
+    return this.users.find((user) => user.id === id);
+  }
 }

@@ -1,4 +1,4 @@
-import { Field, ObjectType } from '@nestjs/graphql';
+import { Directive, Field, ObjectType } from '@nestjs/graphql';
 
 @ObjectType()
 export class Product {
@@ -7,4 +7,14 @@ export class Product {
 
   @Field()
   rating: number;
+}
+
+@ObjectType()
+@Directive('@key(fields: "id")')
+export class User {
+  @Field()
+  id: number;
+
+  @Field()
+  basket: Product[];
 }

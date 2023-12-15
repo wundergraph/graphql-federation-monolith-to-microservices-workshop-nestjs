@@ -31,9 +31,8 @@ step 3c
 wgc subgraph check products --schema Documents/Programming/WunderGraph/nest-js-workshop/products/schema.graphql
 wgc subgraph publish products --schema Documents/Programming/WunderGraph/nest-js-workshop/products/schema.graphql
 
+step 4
 // comment out queries in monolith
 wgc subgraph publish monolith --schema Documents/Programming/WunderGraph/nest-js-workshop/monolith/schema.graphql
 
 wgc delete subgraph monolith -f
-
-step 4
